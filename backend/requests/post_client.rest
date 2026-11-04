@@ -1,0 +1,75 @@
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "testtrainer",
+    "email": "testtrainer@example.com",
+    "password": "TestPassword123!",
+    "role": "trainer"
+}
+
+### Another Request 
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "testuser3",
+    "email": "testuser2@example.com",
+    "password": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "role": "trainer"
+}
+
+### Testing invalid username validation 
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "ab",
+    "email": "testuser4@example.com",
+    "password": "TestPassword123!",
+    "role": "trainer"
+}
+
+### Test maximun username characters
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "abcdefghijklmnopqrstuvwxyz12345",
+    "email": "testuser5@example.com",
+    "password": "TestPassword123!",
+    "role": "trainer"
+}
+
+### test invalid email
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "testuser6",
+    "email": "invalidemail",
+    "password": "TestPassword123!",
+    "role": "trainer"
+}
+
+### Test Invalid Roles
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "testuser7",
+    "email": "testuser7@example.com",
+    "password": "TestPassword123!",
+    "role": "admin"
+}
+
+### Test duplicate username
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+    "username": "testtrainer",
+    "email": "anotherrnewemail@example.com",
+    "password": "TestPassword123!",
+    "role": "trainer"
+}
