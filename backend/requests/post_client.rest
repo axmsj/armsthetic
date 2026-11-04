@@ -69,7 +69,7 @@ Content-Type: application/json
 
 {
     "username": "testtrainer",
-    "email": "anotherrnewemail@example.com",
+    "email": "uniqueemail123@example.com",
     "password": "TestPassword123!",
     "role": "trainer"
 }
